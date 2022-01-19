@@ -1,6 +1,6 @@
 # CINEMA APP
 
-This project simulates cinema ticket shop using Hibernate and Spring in main. This application has several possibilities:
+This project simulates cinema ticket shop using Hibernate and Spring. This application has several possibilities:
 * User authentication and authorization
 * Adding new movie, cinema hall, movie session
 * Creating order
@@ -13,7 +13,6 @@ This project simulates cinema ticket shop using Hibernate and Spring in main. Th
 * GET: /movies - user/admin
 * POST: /movies - admin
 * GET: /movie-sessions/available - user/admin
-* GET: /movie-sessions/{id} - user/admin
 * POST: /movie-sessions - admin
 * PUT: /movie-sessions/{id} - admin
 * DELETE: /movie-sessions/{id} - admin
@@ -27,18 +26,19 @@ This project simulates cinema ticket shop using Hibernate and Spring in main. Th
 * Apache Tomcat
 * Hibernate
 * Hibernate Validator
-* Spring JDBC
+* Spring Core
 * Spring MVC
 * Spring Security
-* Spring ORM
 * MySQL
 * Maven
 
 #### Setup
-1. Install and configure MySQL & MySQL Workbench
+1. Install and configure MySQL & MySQL Workbench and create schema
 2. Install and configure Tomcat 9.0.56
 3. Link the database to the application:
 
     * *In the src/main/resources/db.properties, change the db.user, db.password, and db.url parameters to the ones you used when configuring MySQL. db.driver and hibernate.dialect change if you are using another DBMS.*
 
-4. After that you can run the application ;)
+4. After that you can run the application and login using:
+   * username `alice-admin@i.ua` with password `admin123` to login as admin
+   * username `bob-user@i.ua` with password `user1234` to login as user
